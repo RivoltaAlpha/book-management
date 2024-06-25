@@ -26,35 +26,35 @@ const BookForm = ({ addBook, editBook, currentBook }: BookFormProps) => {
           }
         };
     return (
+        <div>
+        <h1 className="text-2xl font-bold mb-2">Book Repository</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
       <input
         ref={titleRef}
         placeholder="Title"
         defaultValue={currentBook?.title || ''}
         required
-        className="border p-2 w-full"
+        className="border p-2 rounded-md w-full mt-5  "
       />
       <input
         ref={authorRef}
         placeholder="Author"
         defaultValue={currentBook?.author || ''}
         required
-        className="border p-2 w-full"
+        className="border  p-2 rounded-md w-full mt-10"
       />
       <input
         ref={yearRef}
         placeholder="Publication Year"
         defaultValue={currentBook?.year || ''}
         required
-        className="border p-2 w-full"
+        className="border  p-2 rounded-md w-full mt-10"
       />
-      <button type="submit" className="bg-blue-500 text-white p-2">
+      <button type="submit" className="bg-blue-500 rounded-md mt-10 text-white p-2">
         {currentBook ? 'Update Book' : 'Add Book'}
       </button>
-    </div>
     </form>
-
+    </div>
     );
 }
 

@@ -37,16 +37,16 @@ const BookTable =({ books, editBook, deleteBook }: BookTableProps) => {
                 <td className="py-2">{book.author}</td>
                 <td className="py-2">{book.year}</td>
                 <td className="py-2">
-                  <button onClick={() => editBook(book)} className="bg-yellow-500 text-white p-1 mx-1">Edit</button>
-                  <button onClick={() => deleteBook(book)} className="bg-red-500 text-white p-1 mx-1">Delete</button>
+                  <button onClick={() => editBook(book)} className="bg-blue-500 text-white p-2 rounded-md mx-1">Edit</button>
+                  <button onClick={() => deleteBook(book)} className="bg-red-600 text-white p-2 rounded-md mx-1">Delete</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
         <div className="flex justify-between mt-4">
-          <button onClick={handlePrevious} disabled={currentPage === 1} className="bg-gray-300 p-2">Previous</button>
-          <button onClick={handleNext} disabled={currentPage === Math.ceil(books.length / booksPerPage)} className="bg-gray-300 p-2">Next</button>
+          <button onClick={handlePrevious} disabled={currentPage === 1} className="bg-black text-white w-40 rounded-md p-300 p-2">Previous</button>
+          <button onClick={handleNext} disabled={currentPage === Math.ceil(books.length / booksPerPage)} className="bg-black text-white rounded-md w-40 p-2">Next</button>
         </div>
       </div>
     );

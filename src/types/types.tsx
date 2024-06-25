@@ -15,3 +15,8 @@ export interface Book {
     editBook: (book: Book) => void;
     deleteBook: (book: Book) => void;
   }
+  
+  export type BookAction =
+    | { type: 'ADD_BOOK'; book: Book }
+    | { type: 'EDIT_BOOK'; oldBook: Book; newBook: Book }
+    | { type: 'DELETE_BOOK'; book: Book };
