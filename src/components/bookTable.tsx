@@ -1,4 +1,4 @@
-import { BookTableProps, Book } from "../types/types";
+import { BookTableProps} from "../types/types";
 import { useState, useCallback } from 'react';
 
 
